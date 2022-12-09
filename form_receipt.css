@@ -1,0 +1,104 @@
+/* Container holding the image and the text */
+
+
+.date1 {
+  position: absolute;
+  left: 595px;
+  top: 271px;
+  font-family: "thsarabun";
+  font-size: 13pt;  
+  /*color: lightgray;*/
+  color: black;
+}
+
+.date2 {
+  position: absolute;
+  left: 325px;
+  top: 891px;
+  font-family: "thsarabun";
+  font-size: 13pt;  
+  /*color: lightgray;*/
+  color: black;
+}
+
+.name_customer {
+  position: absolute;
+  left: 95px;
+  top: 300px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black;  
+}
+
+div.address1 {
+  position: absolute;
+  left: 75px;
+  top: 326px;
+  width: 90%;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black;  
+}
+
+.book {
+  position: absolute;
+  left: 180px;
+  top: 459px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black;  
+}
+
+.order_no {
+  position: absolute;
+  left: 625px;
+  top: 243px;
+  font-family: "thsarabun";
+  font-size: 13pt;  
+  color: black;  
+}
+
+div.total_price{
+  position: absolute;
+  left: 678px;
+  top: 764px;
+  width: 30px;
+  text-align: center;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black;  
+}
+
+
+div.reduce {
+  position: absolute;
+  left: 678px;
+  top: 792px;
+  width: 30px;
+  text-align: center;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black;  	
+}
+
+div.shipping {
+  position: absolute;
+  left: 678px;
+  top: 818px;
+  width: 30px;
+  text-align: center;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black;  	
+}
+
+div.total_net_price {
+  position: absolute;
+  left: 678px;
+  top: 844px;
+  width: 30px;
+  text-align: center;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black;  	
+}

@@ -1,0 +1,229 @@
+/* Container holding the image and the text */
+.container {
+	position: relative;	
+}
+
+.namebuyer {
+	position: absolute;
+  left: 120px;
+  top: 120px;
+  font-family: "thsarabun";
+  font-size: 16pt;  
+  font-weight: bold;
+  color: green	;
+}
+
+.info_buyer {
+  position: absolute;
+  left: 55px;
+  top: 45px;
+  font-family: "Garuda";
+  font-size: 2pt;  
+  /*color: lightgray;*/
+  color: silver;
+}
+
+.footer_right {
+  position: absolute;
+  left: 450px;
+  top: 917px;
+  font-family: "thsarabun";
+  font-size: 12pt;  
+  color: DimGray;  
+}
+
+.footer_left {
+  position: absolute;
+  left: 100px;
+  top: 917px;
+  font-family: "thsarabun";
+  font-size: 12pt;  
+  color: DimGray;  
+}
+
+.sayhello_buyer {
+  position: absolute;
+  left: 308px;
+  top: 116px;
+  font-family: "thsarabun";
+  font-size: 20pt;  
+  /*color: lightgray;*/
+  color: black;
+}
+
+.cover_buyer {
+  position: absolute;
+  left: 59px;
+  top: 510px;
+  /*text-align: center;*/
+  font-family: "thsarabun";
+  font-size: 16pt;  
+  color: gray	;
+}
+
+h3 {
+	text-align: center;
+	font-family: "Garuda";	
+}
+
+p {
+	text-align: center;
+	font-family: "thsarabun";
+	font-size: 16pt;	
+}
+
+#thank {
+	text-align: center;
+	font-family: "thsarabun";
+	font-size: 16pt;		
+	/*font-weight: bold;*/	
+	left: 20px;
+	top: 20px;
+}
+
+/* Invoic css only*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*a {
+  color: #5D6975;
+  text-decoration: underline;
+}*/
+
+body {
+  position: relative;
+  width: 21cm;  
+  height: 29.7cm; 
+  margin: 0 auto; 
+  color: #001028;
+  background: #FFFFFF; 
+  /*font-family: Arial, sans-serif; */
+  font-size: 20px; 
+  font-family: thsarabun;
+}
+
+header {
+  padding: 10px 0;
+  margin-bottom: 30px;
+  /*font-family: "thsarabun";*/
+}
+
+#logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#logo img {
+  width: 90px;
+}
+
+h1 {
+  border-top: 1px solid  #5D6975;
+  border-bottom: 1px solid  #5D6975;
+  color: #5D6975;
+  font-size: 2.4em;
+  line-height: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 0 20px 0;
+  background: url(dimension.png);
+}
+
+#project {
+  float: left;
+}
+
+#project span {
+  color: #5D6975;
+  text-align: right;
+  width: 52px;
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+#company {
+  float: right;
+  text-align: right;  	
+}
+
+#project div,
+#company div {
+  white-space: nowrap;        
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px;
+  /*font-family: "thsarabun";*/
+}
+
+table tr:nth-child(2n-1) td {
+  /*background: #F5F5F5;*/
+  background: white;
+}
+
+table th,
+table td {
+  text-align: center;
+}
+
+table th {
+  padding: 5px 20px;
+  /*color: #5D6975;*/
+  color: #006400;
+  border-bottom: 1px solid #C1CED9;
+  white-space: nowrap;        
+  font-weight: normal;
+}
+
+table .service,
+table .desc {
+  text-align: left;
+}
+
+table td {
+  padding: 20px;
+  text-align: right;
+}
+
+table td.service,
+table td.desc {
+  vertical-align: top;  	
+}
+
+table td.unit,
+table td.qty,
+table td.total {
+  font-size: 1.0em;
+}
+
+table td.sub {
+  border-top: 1px solid #C1CED9;
+}
+
+table td.grand {
+  border-top: 1px solid #5D6975;  
+}
+
+#notices .notice {
+  color: #5D6975;
+  font-size: 0.9em;  
+  /*font-family: "thsarabun";	*/
+}
+
+footer {
+  color: #5D6975;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #C1CED9;
+  padding: 8px 0;
+  text-align: center;
+}
