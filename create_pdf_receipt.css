@@ -52,7 +52,8 @@ div.address1 {
 .order_no {
   position: absolute;
   left: 625px;
-  top: 243px;
+  top: 240px;
+  width: 150px;
   font-family: "thsarabun";
   font-size: 13pt;  
   color: black;  
