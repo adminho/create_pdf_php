@@ -63,7 +63,7 @@ function createPDF($template_pdf, $size, $pwd1, $pwd2, $outfile, $data, $show){
 	$pagecount = $mpdf->SetSourceFile(__DIR__ . '/ebooks/'.$template_pdf);
 	// Import the last page of the source PDF file
 	// copy all pages from the old unprotected pdf in the new one
-	$stylesheet = file_get_contents('form_receipt.css');
+	$stylesheet = file_get_contents('create_pdf_receipt.css');
 	$mpdf->WriteHTML($stylesheet,1);	
 		
 	for ($page = 1; $page <= $pagecount; $page++) {
@@ -130,13 +130,10 @@ if( !empty($csv_file )){
 			echo '<hr><br>มีได้สร้างไฟล์ pdf เพราะยังไม่มีรายชื่อลูกค้าใหม่เข้ามาเลย<br>';		
 		}		
 	} else {
-		echo '<hr><br>ไม่มีไฟล์'.$csv_file.'<br>';		
+		echo "<hr><br>ไม่มีไฟล์  $csv_file<br>";		
 	}		
 	exit();
 } 
-
-
-
 
 ?>
 

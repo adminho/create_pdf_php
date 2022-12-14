@@ -44,20 +44,9 @@ foreach ($data as $row) {
 fclose($f);
 
 // ตัวออย่าง URL http://localhost/save_to_csv.php?date=1/02/2564 11.12&email=test@gamil.com&name=ทดสอบ ชอบทดลอง&status=SENT
-echo '<div style="display:flex; justify-content: left; margin-top:5%; margin-left:5%; margin-right:5%; padding-top:25px; padding-left:20px; padding-right:20px;">';
-echo '<p>';
-echo 'Date: '.$date.'<br>';
-echo 'Email: '.$email.'<br>';
-echo 'Name: '.$name.'<br>';
-echo 'Order No: '.$order_no.'<br>';
-echo 'Status:' .$status.'<br>';
-echo 'Book: '.$book.'<br>';
-echo 'Customer data: '.$ouput_file_dir.$csv.'<br>';
-echo '</p>';
-echo '</div>';
-
-echo '<div style="display:flex; justify-content: left; margin-top:2%; margin-left:5%; margin-right:5%; padding-top:25px; padding-left:20px; padding-right:20px;">';
-echo "<a href = $url target='_blank' > กดสร้างไฟล์ pdf </a> <br>";	
-echo "<br>&nbsp;&nbsp;&nbsp;&nbsp<a href = 'http://localhost/order_ebook_python.php' >back</a>";		
+echo '<div style="justify-content: center; margin-top:3%; margin-left:10%; margin-right:10%; padding-top:10px; padding-left:10px; padding-right:10px; padding-bottom:10px; border-style:double; border-color:green;">';
+echo "<strong>บันทึกข้อมุลลงไฟล์  $ouput_file_dir.$csv เรียบร้อยแล้วจ้า!</strong><br>";
+echo "<br><a href = $url  target='_blank'><button>สร้างไฟล์ pdf</button></a>";
+echo "&nbsp;&nbsp;<a href='http://localhost/order_ebook_python.php'><button>Back</button></a>";
 echo '</div>';	
 ?> 

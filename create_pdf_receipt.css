@@ -49,10 +49,10 @@ div.address1 {
   color: black;  
 }
 
-.order_no {
+div.order_no {
   position: absolute;
   left: 625px;
-  top: 240px;
+  top: 244px;
   width: 150px;
   font-family: "thsarabun";
   font-size: 13pt;  

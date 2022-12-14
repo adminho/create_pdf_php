@@ -1,0 +1,228 @@
+/* Container holding the image and the text */
+
+
+div.day {
+  position: absolute;
+  left: 455px;
+  top: 1005px;
+  width: 30px;
+  text-align: right;
+  font-family: "thsarabun";
+  font-size: 13pt;  
+  /*color: lightgray;*/
+  color: black;
+}
+
+div.month {
+  position: absolute;
+  left: 505px;
+  top: 1005px;
+  width: 30px;
+  text-align: right;
+  font-family: "thsarabun";
+  font-size: 13pt;  
+  /*color: lightgray;*/
+  color: black;
+}
+
+div.year {
+  position: absolute;
+  left: 570px;
+  top: 1005px;
+  width: 30px;
+  text-align: right;
+  font-family: "thsarabun";
+  font-size: 13pt;  
+  color: black;  
+}
+
+.bookNo {
+  position: absolute;
+  left: 692px;
+  top: 64px;
+  font-family: "thsarabun";
+  font-size: 13pt;  
+  color: black;  
+}
+
+.documentNo {
+  position: absolute;
+  left: 690px;
+  top: 86px;
+  font-family: "thsarabun";
+  font-size: 10pt;  
+  color: black;  
+}
+
+.taxno1{
+  position: absolute;
+  left: 505px;
+  top: 107px;
+  font-family: "thsarabun";
+  font-size: 16pt;  
+  color: black;  
+}
+
+
+.name1{
+  position: absolute;
+  left: 80px;
+  top: 131px;
+  font-family: "thsarabun";
+  font-size: 12pt;  
+  color: black;  
+}
+
+.address1{
+  position: absolute;
+  left: 80px;
+  top: 163px;
+  font-family: "thsarabun";
+  font-size: 12pt;  
+  color: black;  
+}
+
+.taxno2{
+  position: absolute;
+  left: 505px;
+  top: 199px;
+  font-family: "thsarabun";
+  font-size: 16pt;  
+  color: black;  
+}
+
+.name2{
+  position: absolute;
+  left: 80px;
+  top: 228px;
+  font-family: "thsarabun";
+  font-size: 12pt;  
+  color: black;  
+}
+
+.address2{
+  position: absolute;
+  left: 80px;
+  top: 263px;
+  font-family: "thsarabun";
+  font-size: 12pt;  
+  color: black;  
+}
+
+.description{
+  position: absolute;
+  left: 130px;
+  top: 838px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black; 
+}
+
+.full_date{
+  position: absolute;
+  left: 455px;
+  top: 835px;
+  font-family: "thsarabun";
+  font-size: 15pt;  
+  color: black; 
+}
+
+div.amount1{
+  position: absolute;
+  left: 582px;
+  top: 836px;
+  text-align: right;
+  width: 50px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black; 
+}
+
+
+div.stang_amount1{
+  position: absolute;
+  left: 634px;
+  top: 836px;
+  text-align: left;
+  width: 30px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black; 	
+}
+
+div.tax1{
+  position: absolute;
+  left: 697px;
+  top: 836px;
+  text-align: right;
+  width: 30px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black; 
+}
+
+div.stang_tax1{
+  position: absolute;
+  left: 729px;
+  top: 836px;
+  text-align: left;
+  width: 30px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black; 
+}
+
+div.amount2{
+  position: absolute;
+  left: 582px;
+  top: 864px;
+  text-align: right;
+  width: 50px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black; 
+}
+
+div.stang_amount2{
+  position: absolute;
+  left: 634px;
+  top: 864px;
+  text-align: left;
+  width: 30px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black; 	
+}
+
+div.tax2{
+  position: absolute;
+  left: 697px;
+  top: 864px;
+  text-align: right;
+  width: 30px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black; 
+}
+
+div.stang_tax2{
+  position: absolute;
+  left: 729px;
+  top: 864px;
+  text-align: left;
+  width: 30px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black; 
+}
+
+.total_bath_char{
+  position: absolute;
+  left: 250px;
+  top: 891px;
+  width: 150px;
+  font-family: "thsarabun";
+  font-size: 15pt;  
+  /*color: lightgray;*/
+  color: black;
+}

@@ -1,7 +1,7 @@
 <?php
 
 $dateOrder = isset($_GET['dateOrder']) ? $_GET['dateOrder'] : '';
-$date = isset($_GET['date']) ? $_GET['date'] : '';
+$date = isset($_GET['dateSend']) ? $_GET['dateSend'] : '';
 $name = isset($_GET['name']) ? $_GET['name'] : '';
 $address1 = isset($_GET['address1']) ? $_GET['address1'] : '';
 $address2 = isset($_GET['address2']) ? $_GET['address2'] : '';
@@ -47,28 +47,10 @@ foreach ($data as $row) {
 fclose($f);
 
 // ตัวออย่าง URL http://localhost/save_to_csv_receipt.php?date=1/02/2564 11.12&email=test@gamil.com&name=ทดสอบ ชอบทดลอง&status=SENT
-echo '<div style="display:flex; justify-content: left; margin-top:5%; margin-left:5%; margin-right:5%; padding-top:25px; padding-left:20px; padding-right:20px;">';
-echo '<p>';
-echo 'Date: '.$date.'<br>';
-echo 'Name: '.$name.'<br>';
-echo 'adress1: '.$address1.'<br>';
-echo 'adress2: '.$address2.'<br>';
-echo 'Tel: '.$tel.'<br>';
-echo 'Book: '.$book.'<br>';
-echo 'Price: '.$price.'<br>';
-echo 'Reduce: '.$reduce.'<br>';
-echo 'Shipping: '.$shipping.'<br>';
-echo 'Total net price: '.$net.'<br>';
-echo 'Quantity: '.$quantity.'<br>';
-echo 'Order No: '.$order_no.'<br>';
-echo 'Status:' .$status.'<br>';
-echo 'Customer csv: '.$ouput_file_dir.$csv.'<br>';
-echo '</p>';
-echo '</div>';
-
-echo '<div style="display:flex; justify-content: left; margin-top:2%; margin-left:5%; margin-right:5%; padding-top:25px; padding-left:20px; padding-right:20px;">';
-echo "<a href = 'create_pdf_receipt.php?csv=$filename' target='_blank' > กดสร้างไฟล์ pdf </a> <br>";		
-echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href = 'http://localhost/form_receipt.php' >back</a>";		
+echo '<div style="justify-content: center; margin-top:3%; margin-left:10%; margin-right:10%; padding-top:10px; padding-left:10px; padding-right:10px; padding-bottom:10px; border-style:double; border-color:green;">';
+echo "<strong>บันทึกข้อมุลลงไฟล์  $ouput_file_dir.$csv เรียบร้อยแล้วจ้า!</strong><br>";
+echo "<br><a href= create_pdf_receipt.php?csv=$filename target='_blank'><button>สร้างไฟล์ pdf</button></a>";		
+echo "&nbsp;&nbsp;<a href='form_receipt.php'><button>Back</button></a>";
 echo '</div>';
 
 ?> 

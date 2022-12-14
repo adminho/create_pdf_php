@@ -9,21 +9,23 @@
 <div style="display:flex; justify-content: center; margin-top:10%;">
 <!-- ตัวอย่าง URL http://localhost/confirm_ebook.php-->
 <form id="myForm" action="confirm_ebook.php" method="get">
-	<h4>สร้างไฟล์ PDF เพื่อขาย ebook</h4>
+	<div class="form-group" align="center">
+		<h4>สร้างไฟล์ PDF เพื่อขาย ebook</h4>
+	</div>
 	<div class="form-group">
-		<input class="form-control" type="text" name="date" placeholder="Date" required>
-		<input class="form-control" type="text" name="email" placeholder="E-mail" required>
-		<input class="form-control" type="text" name="name" size="50" placeholder="Name" required>
-		<input class="form-control" type="text" name="orderNo" placeholder="Order No" required>
-		<input class="form-control" type="text" name="status" value="SENT" placeholder="Status" required>
+		<input class="form-control" type="text" name="date" placeholder="Date" required style="margin-bottom: 5px">
+		<input class="form-control" type="text" name="email" placeholder="E-mail" required style="margin-bottom: 5px">
+		<input class="form-control" type="text" name="name"  placeholder="Name" required style="margin-bottom: 5px">
+		<input class="form-control" type="text" name="orderNo" placeholder="Order No" required style="margin-bottom: 5px">
+		<input class="form-control" type="text" name="status" value="SENT" placeholder="Status" required style="margin-bottom: 5px">
 			
 		<select class="form-control" id="" name="book" placeholder="Book name" required>
 			<option value="python beginner book">python beginner book</option>
-			<option value="AI book">AI book</option>    
+			<option value="หนังสือ AI ไม่ยาก ปี 1">หนังสือ AI ไม่ยาก ปี 1</option>    
 		</select>
 	</div>
 	
-	<input id="btnSubmit" class="btn btn-success" type="submit" value="ส่งข้อมูล">
+	<input id="btnSubmit" class="btn btn-primary" type="submit" value="ส่งข้อมูล">
 </form>
 
 </div>

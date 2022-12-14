@@ -6,7 +6,7 @@ if($count > 0) {
   echo '<h4>ตรวจสอบข้อมูล</h4>';
   echo '<form id="myForm" action="save_to_csv_pdfbook.php" method="get">';
     foreach($_GET as $query_string_variable => $value) {
-       echo "<label>$query_string_variable :&nbsp;</label><input type='text' name=$query_string_variable size=50 readonly='readonly' value='$value' ><br>";
+       echo "<label>$query_string_variable :&nbsp;</label><input type='text' name=$query_string_variable size=50 readonly='readonly' value='$value' sytle='border:0;outline:0;'><br>";
     }
 	echo "<br><div align='left'><input type='submit' value='ยืนยัน'></div>";		
 	echo "</form>";	
