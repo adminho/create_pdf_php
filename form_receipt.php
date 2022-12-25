@@ -4,11 +4,8 @@
 </head>
 <body>
 
-<!-- ตัวอย่าง URL http://localhost/form_receipt.php-->
 <div style="display:flex; justify-content: center; margin-top:3%; margin-left:10%; margin-right:10%; padding-top:25px; padding-left:10px; padding-right:10px; border-style:double; border-color:green;">
-
-<!--<form id="myForm" action="save_to_csv_receipt.php" method="get">-->
-<form id="myForm" action="confirm_receipt.php" method="get">
+<form id="myForm" action="confirm_create_pdf.php" method="get">
 <div class="form-group" align="center">
 	<h4>สร้างใบเสร็จรับเงิน</h4><hr>
 </div>
@@ -45,7 +42,7 @@
 			<input class="form-control form-control-sm" type="text" name="address1" placeholder="Adress 1" required>
 		</div>
 		<div class="col">
-			<input class="form-control form-control-sm" type="text" name="address2" placeholder="Adress 2">
+			<input class="form-control form-control-sm" type="number" name="taxID" placeholder="Tax ID">
 		</div>
 	</div>
 	
@@ -80,7 +77,7 @@
 
 <div class="form-group">
 	<div class="form-inline">		
-		<label>Order No :&nbsp;</label>	
+		<label>หมายเลขคำสั่งซื้อ :&nbsp;</label>	
 		<input class="form-control form-control-sm" type="text" name="orderNo" placeholder="Order No" required> 	
 		&nbsp;&nbsp;<button class="btn btn-secondary btn-sm" type="button" onclick="genOrderNo()" >Generate</button>	
 	</div>
@@ -97,6 +94,8 @@
 </div>
 <hr>
 <input class="btn btn-primary" type="submit" value="ส่งข้อมูล">
+<input type="hidden" id="custId" name="urlConfirm" value="save_to_csv_receipt.php">
+
 </form>
 </div>
 <script>

@@ -5,13 +5,14 @@ function createPDF($template_pdf, $size, $pwd1, $pwd2, $outfile, $data, $show){
 	$date = $data[0];
 	$name = $data[1];
 	$address1 = $data[2];	
-	$book = $data[3];
-	$price = $data[4];
-	$reduce = $data[5];
-	$shipping = $data[6];
-	$quantity = $data[7];	
-	$total_net_price = $data[8];
-	$order_no = $data[9];		
+	$taxID = $data[3];
+	$book = $data[4];
+	$price = $data[5];
+	$reduce = $data[6];
+	$shipping = $data[7];
+	$quantity = $data[8];	
+	$total_net_price = $data[9];
+	$order_no = $data[10];		
 	
 	$total_price =  $price * $quantity;
 	
@@ -20,6 +21,7 @@ function createPDF($template_pdf, $size, $pwd1, $pwd2, $outfile, $data, $show){
 	<div class="order_no">$order_no</div>
 	<div class="name_customer">$name</div>
 	<div class="address1">$address1</div>
+	<div class="taxID">$taxID</div>
 	<div class="book">$book</div>
 	<div class="date2">$date</div>	
 	<div class="total_price">$total_price</div>
@@ -30,6 +32,7 @@ function createPDF($template_pdf, $size, $pwd1, $pwd2, $outfile, $data, $show){
 	    '$date' => $date, 
 		'$name' => $name,
 		'$address1' => $address1,      
+		'$taxID' => $taxID,    
 		'$book' => $book, 
 		'$total_price' => $total_price,
 		'$reduce' => $reduce, 
@@ -94,8 +97,7 @@ $template_pdf = 'receipt_template.pdf';
 
 // ตัวอย่าง URL http://localhost/create_pdf_receipt.php?csv=$filename
 $csv_file = isset($_GET['csv']) ? $_GET['csv'] : '';
-if( !empty($csv_file )){
-	//$csv_file = $local_dir.$csv_file;
+if( !empty($csv_file )){	
 	$csv_file = $csv_file;
 	if (($handle = fopen($csv_file, "r")) !== FALSE) {
 		$row = 1;
@@ -108,7 +110,7 @@ if( !empty($csv_file )){
 			$date = $data[1];			
 			$name = $data[2];
 			$address1 = $data[3];			
-			$address2 = $data[4];			
+			$taxID = $data[4] != '' ? "<span style='font-weight: bold;'>เลขประจำตัวผู้เสียภาษี</span>&nbsp;&nbsp;$data[4]" : '';			
 			$tel = $data[5];			
 			$book = $data[6];			
 			$price = $data[7];			
@@ -119,8 +121,10 @@ if( !empty($csv_file )){
 			$order_no = $data[12];
 			$status = $data[13];
 			$outfile = $ouput_file_dir.$name.'.pdf';
+
+			$allInput = array($date, $name, $address1, $taxID, $book, $price, $reduce, $shipping, $quantity, $net, $order_no);
 			if (!file_exists($outfile) && $status==='SENT') {					
-				createPDF($template_pdf, $size, $pwd1, $pwd2, $outfile, array($date, $name, $address1, $book, $price, $reduce, $shipping, $quantity, $net, $order_no), FALSE );				
+				createPDF($template_pdf, $size, $pwd1, $pwd2, $outfile, $allInput , FALSE );				
 				echo "<a href = 'show_pdf.php?filename=$outfile' target='_blank'> $name.pdf </a> --> สร้างไฟล์สำเร็จ<br>";									
 				$is_createfile=TRUE;
 			} 		 

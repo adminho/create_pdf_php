@@ -4,9 +4,8 @@
 </head>
 <body>
 
-<!-- ตัวอย่าง URL http://localhost/form_tax53.php-->
 <div style="display:flex; justify-content: center; margin-top:2%;">
-<form id="myForm" action="create_pdf_officerent.php" target="_blank" method="get">
+<form id="myForm" action="confirm_create_pdf.php" method="get">
 	<div class="form-group" align="center">
 		<h4>สร้างทวิ 50</h4><hr>
 	</div>
@@ -32,10 +31,10 @@
 	<div class="form-group">
 		<div class="form-inline">
 			<label>Document :&nbsp;</label>	
-			<select class="form-control form-control-sm" name="document" placeholder="เอกสาร" onchange="selectBook(this)" required>
+			<select class="form-control form-control-sm" name="document" placeholder="เอกสาร" onchange="selectDocument(this)" required>
 				<option value="ทวิ 50 ค่าเช่าบ้าน">ทวิ 50 ค่าเช่าบ้าน</option>    
 				<option value="ทวิ 50 ค่าทำบัญชี">ทวิ 50 ค่าทำบัญชี</option>    
-				<option value="ทวิ 50 ค่าขน Shopee">ทวิ 50 ค่าขน Shopeek</option>    
+				<option value="ทวิ 50 ค่าขนส่ง Shopee">ทวิ 50 ค่าขนส่ง Shopee</option>    
 				<option value="ทวิ 50 ค่าบริการต่างๆ ของ Shopee">ทวิ 50 ค่าบริการต่างๆ ของ Shopee</option>  
 			</select>
 		</div>
@@ -77,17 +76,17 @@
 			<label>จำนวนเงินที่จ่าย : &nbsp;</label>
 			<input class="form-control form-control-sm" type="number" name="amount" placeholder="Baht" required>
 			<label>&nbsp;&nbsp;สตางค์: &nbsp;</label>
-			<input class="form-control form-control-sm" type="number" name="stangAmount" placeholder="Baht" style=" width: 10%" required>							
+			<input class="form-control form-control-sm" type="text" name="stangAmount" placeholder="Baht" style=" width: 10%" required>							
 		</div>		
 		<div class="form-inline" style="margin-bottom: 5px">
 			<label>ภาษีที่หักและนำส่งไว้  : &nbsp;</label>
 			<input class="form-control form-control-sm" type="number" name="tax" placeholder="Baht" required>
 			<label>&nbsp;&nbsp;สตางค์ : &nbsp;</label>
-			<input class="form-control form-control-sm" type="number" name="stangTax" placeholder="Baht" style=" width: 10%" required>							
+			<input class="form-control form-control-sm" type="text" name="stangTax" placeholder="Baht" style=" width: 10%" required>							
 		</div>
 		<div class="form-inline" style="margin-bottom: 5px">
 			<label>รวมเงินภาษีที่หักนำส่ง (ตัวอักษร)  : &nbsp;</label>
-			<input class="form-control form-control-sm" type="text" name="bahtChar" size=50 placeholder="Baht" required>			
+			<input class="form-control form-control-sm" type="text" name="bahtChar" size=50 placeholder="ตัวอักษรบาท" required>			
 		</div>
 	</div>
 
@@ -100,6 +99,8 @@
 
 	<hr>
 	<input class="btn btn-primary" type="submit">
+	<input type="hidden" name="urlConfirm" value="create_pdf_tax50.php">	
+	
 </form>
 </div>
 <script>
@@ -112,7 +113,7 @@ let count = 1;
 		myForm["taxId" + count++ ].value=n;
 	}
 }
-function selectBook(selectObject){
+function selectDocument(selectObject){
  myForm.bookNo.value = "OR-2022"; 
 
  var value = selectObject.value;  
@@ -143,8 +144,36 @@ function selectBook(selectObject){
 	
 	let taxId = "3301900031525";
 	pushTaxIdtoElement(myForm, taxId);	
+	
+ } else if(value == "ทวิ 50 ค่าขนส่ง Shopee"){
+	myForm.description.value = "ค่าขนส่ง";
+	myForm.name.value = "บริษัท ช้อปปี้ เอ็กซ์เพรส (ประเทศไทย) จำกัด";
+	myForm.address.value = "อาคาร เอไอเอ แคปปิตอล เซ็นเตอร์ ชั้นที่ 24 เลขที่ 89 ถนนรัชดาภิเษก แขวงดินแดง เขตดินแดง จังหวัดกรุงเทพมหานคร 10400";
+	
+	myForm.amount.value=0;
+	myForm.stangAmount.value="00";
+	myForm.tax.value=0;
+	myForm.stangTax.value="00";
+	myForm.bahtChar.value="";
+	
+	let taxId = "0105561164871";
+	pushTaxIdtoElement(myForm, taxId);			
+ 
+ } else if(value == "ทวิ 50 ค่าบริการต่างๆ ของ Shopee"){
+	myForm.description.value = "ค่าบริการต่างๆ ของช้อปปี้ ";
+	myForm.name.value = "บริษัท ช้อปปี้ (ประเทศไทย) จำกัด";
+	myForm.address.value = "อาคาร เอไอเอ แคปปิตอล เซ็นเตอร์ ชั้นที่ 24 เลขที่ 89 ถนนรัชดาภิเษก แขวงดินแดง เขตดินแดง จังหวัดกรุงเทพมหานคร 10400";
+	
+	myForm.amount.value=0;
+	myForm.stangAmount.value="00";
+	myForm.tax.value=0;
+	myForm.stangTax.value="00";
+	myForm.bahtChar.value="";
+	
+	let taxId = "0105558019581";
+	pushTaxIdtoElement(myForm, taxId);	
+ 
  }
-  
 
 }
 
@@ -172,7 +201,7 @@ function genOrderNo(){
 window.onload = (event) => {
   createDate();  
   genOrderNo();
-  selectBook(myForm.document);
+  selectDocument(myForm.document);
 };
 </script>
 </body>

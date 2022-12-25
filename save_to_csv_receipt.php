@@ -4,7 +4,7 @@ $dateOrder = isset($_GET['dateOrder']) ? $_GET['dateOrder'] : '';
 $date = isset($_GET['dateSend']) ? $_GET['dateSend'] : '';
 $name = isset($_GET['name']) ? $_GET['name'] : '';
 $address1 = isset($_GET['address1']) ? $_GET['address1'] : '';
-$address2 = isset($_GET['address2']) ? $_GET['address2'] : '';
+$taxID = isset($_GET['taxID']) ? $_GET['taxID'] : '';
 $tel = isset($_GET['tel']) ? $_GET['tel'] : '';
 $book = isset($_GET['book']) ? $_GET['book'] : '';
 $price = isset($_GET['price']) ? $_GET['price'] : '';
@@ -24,7 +24,7 @@ if($book === 'python beginner book'){
 }
 
 $data = [
-	[$dateOrder, $date, $name, $address1, $address2, $tel, $book, $price, $reduce, $shipping, $quantity, $net,  $order_no, $status, $chanel],
+	[$dateOrder, $date, $name, $address1, $taxID, $tel, $book, $price, $reduce, $shipping, $quantity, $net,  $order_no, $status, $chanel],
 ];
 
 
@@ -48,8 +48,8 @@ fclose($f);
 
 // ตัวออย่าง URL http://localhost/save_to_csv_receipt.php?date=1/02/2564 11.12&email=test@gamil.com&name=ทดสอบ ชอบทดลอง&status=SENT
 echo '<div style="justify-content: center; margin-top:3%; margin-left:10%; margin-right:10%; padding-top:10px; padding-left:10px; padding-right:10px; padding-bottom:10px; border-style:double; border-color:green;">';
-echo "<strong>บันทึกข้อมุลลงไฟล์  $ouput_file_dir.$csv เรียบร้อยแล้วจ้า!</strong><br>";
-echo "<br><a href= create_pdf_receipt.php?csv=$filename target='_blank'><button>สร้างไฟล์ pdf</button></a>";		
+echo "<strong>บันทึกข้อมุลลงไฟล์  $ouput_file_dir$csv เรียบร้อยแล้วจ้า!</strong><br>";
+echo "<br><a href= create_pdf_receipt.php?csv=$filename><button>สร้างไฟล์ pdf</button></a>";		
 echo "&nbsp;&nbsp;<a href='form_receipt.php'><button>Back</button></a>";
 echo '</div>';
 

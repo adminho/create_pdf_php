@@ -120,7 +120,6 @@ $pwd1 = '';
 $pwd2 = '';
 $local_dir = 'F:/Dropbox/sales/';
 $ouput_file_dir = '';
-$template_pdf = '';
 
 $day = isset($_GET['day']) ? $_GET['day'] : '';
 $month = isset($_GET['month']) ? $_GET['month'] : '';
@@ -141,16 +140,13 @@ $tax = isset($_GET['tax']) ? $_GET['tax'] : '';
 $stangTax = isset($_GET['stangTax']) ? $_GET['stangTax'] : '';
 $bahtChar = isset($_GET['bahtChar']) ? $_GET['bahtChar'] : '';
 
-
-if($document == 'ทวิ 50 ค่าเช่าบ้าน' || $document == 'ทวิ 50 ค่าทำบัญชี') {
-	$ouput_file_dir = $local_dir.'tax50_office_rent/';
-	$template_pdf = 'template_tax50_officerent.pdf';
+$template_pdf = 'template_tax50.pdf';
+if(str_starts_with($document, 'ทวิ 50 ค่าเช่าบ้าน')) {
+	$ouput_file_dir = $local_dir.'tax50_office_rent/';	
+} 
+else if (str_starts_with($document, 'ทวิ 50 ค่าทำบัญชี')){		
+$ouput_file_dir = $local_dir.'tax50_accounting_fee/';	
 }
-
-function createStringTaxId(){
-	
-}
-
 
 $taxId = $_GET['taxId1'].'&nbsp;&nbsp;&nbsp;'.$_GET['taxId2'].'&nbsp;&nbsp;'.$_GET['taxId3'].'&nbsp;&nbsp;'.$_GET['taxId4'].'&nbsp;&nbsp;'.$_GET['taxId5'].'&nbsp;&nbsp;&nbsp;'.$_GET['taxId6'].'&nbsp;&nbsp;'.$_GET['taxId7'].'&nbsp;&nbsp;'.$_GET['taxId8'].'&nbsp;&nbsp;'.$_GET['taxId9'].'&nbsp;&nbsp;'.$_GET['taxId10'].'&nbsp;&nbsp;&nbsp;'.$_GET['taxId11'].'&nbsp;&nbsp;'.$_GET['taxId12'].'&nbsp;&nbsp;&nbsp;&nbsp;'.$_GET['taxId13'];
 
@@ -158,24 +154,22 @@ $taxId = $_GET['taxId1'].'&nbsp;&nbsp;&nbsp;'.$_GET['taxId2'].'&nbsp;&nbsp;'.$_G
 $data = array($day, $month, $year, $bookNo, $documentNo, $description,
 	$name, $address, $taxId, $amount, $stangAmount, $tax, $stangTax, $bahtChar  );
 		
-// ตัวอย่าง URL http://localhost/create_pdf_officerent.php?csv=$filename		
 if( $ouput_file_dir != '') {
-	$outfile = $ouput_file_dir.'tax53_office_rent_'.$day.'_'.$month.'_'.$year.'.pdf';
-	if (!file_exists($outfile)) {					
-		createPDF($template_pdf, $size, $pwd1, $pwd2, $outfile, $data, FALSE );				
-		echo "<a href = 'show_pdf.php?filename=$outfile' target='_blank'> $outfile </a> --> สร้างไฟล์สำเร็จ<br>";									
-				
-	} else {
-		echo '<hr><br>ไฟล์ '. $outfile.'  มีอยู่แล้ว <br>';		
-	}		
+	$date = new DateTime();
+    $date_str = $date->format('Ymd');
+	$outfile = $ouput_file_dir.'tax50_'.$date_str.'.pdf';
+	if (file_exists($outfile)) {	
+		echo '<hr><br>ไฟล์ '. $outfile.'  มีอยู่แล้ว จึงต้องลบไฟล์เก่า <br><br>';			
+		unlink($outfile);				
+	} 	
+	createPDF($template_pdf, $size, $pwd1, $pwd2, $outfile, $data, FALSE );				
+	echo "<a href = 'show_pdf.php?filename=$outfile' target='_blank'> $outfile </a> --> สร้างไฟล์สำเร็จ<br>";									
+			
 } else {
-	echo '<hr><br>ระบุเอกสารที่จะสร้างผิด<br>';	
+	echo '<hr><br>$ouput_file_dir เป็นค่าว่าง<br>';	
 }
 			
 exit();
-
-
-
 
 
 ?>

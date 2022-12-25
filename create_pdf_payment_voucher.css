@@ -1,40 +1,48 @@
 /* Container holding the image and the text */
 
 
-.date1 {
+.date {
   position: absolute;
-  left: 595px;
-  top: 271px;
+  left: 540px;
+  top: 148px;
   font-family: "thsarabun";
-  font-size: 13pt;  
+  font-size: 14pt;  
   /*color: lightgray;*/
   color: black;
 }
-
-.date2 {
+.documentNo {
+  position: absolute;
+  left: 160px;
+  top: 148px;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  /*color: lightgray;*/
+  color: black;
+}
+.items {
   position: absolute;
   left: 325px;
-  top: 891px;
+  top: 450px;
   font-family: "thsarabun";
-  font-size: 13pt;  
+  font-size: 14pt;  
   /*color: lightgray;*/
   color: black;
 }
 
-.name_customer {
+.name {
   position: absolute;
-  left: 95px;
-  top: 300px;
+  left: 119px;
+  top: 325px;
   font-family: "thsarabun";
   font-size: 14pt;  
   color: black;  
 }
 
-div.address1 {
+div.address {
   position: absolute;
-  left: 75px;
-  top: 326px;
-  width: 90%;
+  left: 119px;
+  top: 345px;
+  width: 100%;
   font-family: "thsarabun";
   font-size: 14pt;  
   color: black;  
@@ -42,65 +50,71 @@ div.address1 {
 
 div.taxID {
   position: absolute;
-  left: 49px;
-  top: 352px;
+  left: 119px;
+  top: 365px;
   width: 100%;
   font-family: "thsarabun";
   font-size: 14pt;  
   color: black; 	
 }
 
-.book {
+.amount {
   position: absolute;
-  left: 180px;
-  top: 459px;
+  left: 635px;
+  top: 450px;
   font-family: "thsarabun";
   font-size: 14pt;  
   color: black;  
 }
 
-div.order_no {
+.total {
   position: absolute;
-  left: 625px;
-  top: 244px;
+  left: 635px;
+  top: 625px;
   width: 150px;
   font-family: "thsarabun";
-  font-size: 13pt;  
-  color: black;  
+  font-size: 14pt;  
+  color: black; 
 }
 
-div.total_price{
+.taxPercent{
   position: absolute;
-  left: 678px;
-  top: 764px;
-  width: 30px;
-  text-align: center;
+  left: 590px;
+  top: 647px;
+  width: 20px;
   font-family: "thsarabun";
   font-size: 14pt;  
-  color: black;  
+  color: black; 
 }
 
-
-div.reduce {
+.tax{
   position: absolute;
-  left: 678px;
-  top: 792px;
-  width: 30px;
-  text-align: center;
+  left: 635px;
+  top: 647px;
+  width: 150px;
   font-family: "thsarabun";
   font-size: 14pt;  
-  color: black;  	
+  color: black; 
 }
 
-div.shipping {
+.net {
   position: absolute;
-  left: 678px;
-  top: 818px;
-  width: 30px;
-  text-align: center;
+  left: 635px;
+  top: 668px;
+  width: 150px;
   font-family: "thsarabun";
   font-size: 14pt;  
-  color: black;  	
+  color: black; 	
+}
+
+.bahtChar {
+  position: absolute;
+  left: 220px;
+  top: 693px;
+  width: 100%;
+  font-family: "thsarabun";
+  font-size: 14pt;  
+  color: black; 	
 }
 
 div.total_net_price {

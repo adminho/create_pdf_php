@@ -137,7 +137,8 @@ h1 {
 }
 
 #project span {
-  color: #5D6975;
+  /*color: #5D6975;*/
+  color: black;
   text-align: right;
   width: 52px;
   margin-right: 10px;

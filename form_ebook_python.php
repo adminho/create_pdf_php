@@ -6,9 +6,9 @@
 </script>
 </head>
 <body>
+
 <div style="display:flex; justify-content: center; margin-top:10%;">
-<!-- ตัวอย่าง URL http://localhost/confirm_ebook.php-->
-<form id="myForm" action="confirm_ebook.php" method="get">
+<form id="myForm" action="confirm_create_pdf.php" method="get">
 	<div class="form-group" align="center">
 		<h4>สร้างไฟล์ PDF เพื่อขาย ebook</h4>
 	</div>
@@ -26,6 +26,8 @@
 	</div>
 	
 	<input id="btnSubmit" class="btn btn-primary" type="submit" value="ส่งข้อมูล">
+	<input type="hidden" id="custId" name="urlConfirm" value="save_to_csv_python_ebook.php">	
+
 </form>
 
 </div>

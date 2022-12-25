@@ -45,8 +45,8 @@ fclose($f);
 
 // ตัวออย่าง URL http://localhost/save_to_csv.php?date=1/02/2564 11.12&email=test@gamil.com&name=ทดสอบ ชอบทดลอง&status=SENT
 echo '<div style="justify-content: center; margin-top:3%; margin-left:10%; margin-right:10%; padding-top:10px; padding-left:10px; padding-right:10px; padding-bottom:10px; border-style:double; border-color:green;">';
-echo "<strong>บันทึกข้อมุลลงไฟล์  $ouput_file_dir.$csv เรียบร้อยแล้วจ้า!</strong><br>";
-echo "<br><a href = $url  target='_blank'><button>สร้างไฟล์ pdf</button></a>";
-echo "&nbsp;&nbsp;<a href='http://localhost/order_ebook_python.php'><button>Back</button></a>";
+echo "<strong>บันทึกข้อมุลลงไฟล์  $ouput_file_dir$csv เรียบร้อยแล้วจ้า!</strong><br>";
+echo "<br><a href = $url><button>สร้างไฟล์ pdf</button></a>";
+echo "&nbsp;&nbsp;<a href='http://localhost/form_ebook_python.php'><button>Back</button></a>";
 echo '</div>';	
 ?> 
